@@ -1,0 +1,76 @@
+﻿<Window x:Class="Quan_ly_phong_tro.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Quan_ly_phong_tro"
+        mc:Ignorable="d"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Title="LoginWindow" Height="450" Width="800">
+    <Grid>
+        <materialDesign:Card HorizontalAlignment="Center" VerticalAlignment="Center" Height="190" Margin="241,127,241,102">
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Grid">
+                        <Setter Property="Margin" Value="15 15 15 0"></Setter>
+                    </Style>
+                </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" ></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBox
+  Width="250"                     
+  x:Name="NameTextBox"
+  materialDesign:HintAssist.Hint="Name"
+  materialDesign:HintAssist.HelperText="Helper text longer than error">
+                        <TextBox.Text>
+                            <Binding
+      Path="Name"
+      UpdateSourceTrigger="PropertyChanged">
+                             
+                            </Binding>
+                        </TextBox.Text>
+                    </TextBox>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <PasswordBox
+                      x:Name="PasswordBox"
+                      materialDesign:HintAssist.Hint="Password"
+                      materialDesign:TextFieldAssist.HasClearButton="True"
+                      materialDesign:HintAssist.HelperText="At least 8 characters" />    
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    Width="100"
+    ToolTip="Resource name: MaterialDesignRaisedButton">
+                        Đăng nhập
+                    </Button>
+                    <Button Grid.Column="1"
+    Style="{StaticResource MaterialDesignRaisedButton}"
+    Width="100"
+    ToolTip="Resource name: MaterialDesignRaisedButton"
+                           >
+                        Thoát
+                    </Button>
+                </Grid>
+            </Grid>    
+        </materialDesign:Card>
+    </Grid>
+</Window>
