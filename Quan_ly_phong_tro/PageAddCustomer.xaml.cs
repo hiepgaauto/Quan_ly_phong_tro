@@ -43,11 +43,11 @@ namespace Quan_ly_phong_tro
                 name = nameCustomer.Text,
                 address = address.Text,
                 birthYear = int.Parse(birth.Text),
-                jobCustomer = job.Text,
+                //jobCustomer = job.Text,
                 numberPhone1 = numphone1.Text,
                 numberPhone2 = numphone2.Text,
                 dateRent = dayRent.DisplayDate,
-                room = room.Text,
+                //room = room.Text,
                 gender = s.ToString(),
                 cmnd = cmnd.Text,
             };

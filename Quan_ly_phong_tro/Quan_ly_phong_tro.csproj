@@ -78,12 +78,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataAccess.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Customer.cs" />
     <Compile Include="PageAddCustomer.xaml.cs">
       <DependentUpon>PageAddCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageGetCustomer.xaml.cs">
+      <DependentUpon>PageGetCustomer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service\AddCustomer.cs" />
     <Page Include="LoginWindow.xaml">
@@ -103,6 +107,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PageAddCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageGetCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

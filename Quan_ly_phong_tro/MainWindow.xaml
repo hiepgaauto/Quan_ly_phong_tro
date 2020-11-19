@@ -47,9 +47,9 @@
                     <TextBlock>
         Trang chủ
                     </TextBlock>
-                    <TextBlock>
+                    <TextBlock MouseLeftButtonDown="checkCustomer">
         Thêm người thuê
-                    </TextBlock>
+                    </TextBlock >
                     <TextBlock>
         Quản lý phòng
                     </TextBlock>
