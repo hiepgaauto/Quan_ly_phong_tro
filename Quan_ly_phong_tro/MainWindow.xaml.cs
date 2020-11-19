@@ -34,5 +34,11 @@ namespace Quan_ly_phong_tro
             PageAddCustomer pageAddCustomer = new PageAddCustomer();
             _NavigationFrame.Navigate(pageAddCustomer);
         }
+
+        public void checkCustomer(object sender, RoutedEventArgs e)
+        {
+            PageGetCustomer pageGetCustomer = new PageGetCustomer();
+            _NavigationFrame.Navigate(pageGetCustomer);
+        }
     }
 }
