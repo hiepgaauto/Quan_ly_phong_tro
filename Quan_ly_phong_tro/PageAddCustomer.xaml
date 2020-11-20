@@ -178,7 +178,13 @@
   Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Margin="0,0,109,0" Height="47" />
                         <Border Padding="10"></Border>
                         <ComboBox
-  materialDesign:HintAssist.Hint="Chọn phòng thuê" Margin="0,0,64,0" x:Name="room"/>
+                        x:Name="ListNameRoom"
+                        DisplayMemberPath="nameRoom"
+                        
+                        ItemsSource="{Binding Path=Room}"
+                        SelectedItem="{Binding note, Mode=TwoWay}"
+                        materialDesign:HintAssist.Hint="Chọn phòng thuê" Margin="0,0,64,0">
+                        </ComboBox>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="3">

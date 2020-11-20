@@ -37,7 +37,7 @@ namespace Quan_ly_phong_tro
         [MaxLength(50)]
         public String address { get; set; }
         
-        public Int32? room { get; set; }
+        public long room { get; set; }
         
         [MaxLength(50)]
         public String numberPhone1 { get; set; }
@@ -65,7 +65,7 @@ namespace Quan_ly_phong_tro
         
         [PrimaryKey, AutoIncrement]
         [Unique(Name = "Room_idRoom_uindex", Order = 0)]
-        public Int64 idRoom { get; set; }
+        public long idRoom { get; set; }
         
         public Int32? statusRoom { get; set; }
         

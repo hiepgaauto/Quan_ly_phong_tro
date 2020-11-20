@@ -25,8 +25,7 @@ namespace Quan_ly_phong_tro
     /// </summary>
     public partial class PageGetCustomer : Page
     {
-        public ObservableCollection<Customer> MyCollection { get; set; }
-
+       
         public PageGetCustomer()
         {
             InitializeComponent();

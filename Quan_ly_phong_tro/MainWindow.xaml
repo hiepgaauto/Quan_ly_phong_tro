@@ -47,7 +47,7 @@
                     <TextBlock>
         Trang chủ
                     </TextBlock>
-                    <TextBlock MouseLeftButtonDown="checkCustomer">
+                    <TextBlock PreviewMouseDown="checkCustomer">
         Thêm người thuê
                     </TextBlock >
                     <TextBlock>
@@ -59,7 +59,7 @@
                     <TextBlock>
         Quản lý người thuê
                     </TextBlock>
-                    <TextBlock MouseLeftButtonDown="check">
+                    <TextBlock PreviewMouseDown="check">
         In hoá đơn
                     </TextBlock>
                 </ListBox>
