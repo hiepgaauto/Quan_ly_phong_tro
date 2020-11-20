@@ -24,6 +24,12 @@ namespace Quan_ly_phong_tro
         public PageAddCustomer()
         {
             InitializeComponent();
+            foreach (var itemRoom in GetRoom())
+            {
+                room.DataContext = new Binding(itemRoom.nameRoom);
+            }
+            
+
         }
             private void checkedSexCustomer(object sender, RoutedEventArgs e)
         {
@@ -33,6 +39,12 @@ namespace Quan_ly_phong_tro
             // ... Display button content as title.
             this.Title = button.Content.ToString();
         }
+
+            public List<Room> GetRoom()
+            {
+                SQLiteConnection Connection = new SQLiteConnection(App.connecter);
+                return Connection.Table<Room>().ToList();
+            }
         private void insertCustomer(object sender, RoutedEventArgs e)
         {
             var checkValue= checkGender.Children.OfType<RadioButton>()
@@ -43,11 +55,11 @@ namespace Quan_ly_phong_tro
                 name = nameCustomer.Text,
                 address = address.Text,
                 birthYear = int.Parse(birth.Text),
-                //jobCustomer = job.Text,
+                jobCustomer = job.Text,
                 numberPhone1 = numphone1.Text,
                 numberPhone2 = numphone2.Text,
                 dateRent = dayRent.DisplayDate,
-                //room = room.Text,
+                room = int.Parse(room.Text),
                 gender = s.ToString(),
                 cmnd = cmnd.Text,
             };
