@@ -20,6 +20,7 @@ namespace Quan_ly_phong_tro
             {
                 db.CreateTable<Customer>();
                 db.CreateTable<Room>();
+                db.CreateTable<Amount>();
             }
         }
     }
@@ -70,5 +71,26 @@ namespace Quan_ly_phong_tro
         public Int32? statusRoom { get; set; }
         
     }
-    
+
+    public partial class Amount
+    {
+
+        [PrimaryKey, AutoIncrement]
+        [Unique(Name = "Amount_id_uindex", Order = 0)]
+        public long id { get; set; }
+
+        [MaxLength(50)]
+        public int dien { get; set; }
+
+        [MaxLength(50)]
+        public int nuoc { get; set; }
+
+        [MaxLength(50)]
+        public int phong { get; set; }
+
+        [MaxLength(50)]
+        public DateTime date_create { get; set; }
+
+    }
+
 }

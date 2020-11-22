@@ -23,6 +23,7 @@ namespace Quan_ly_phong_tro
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void ToggleButton_Checked(object sender, RoutedEventArgs e)
@@ -39,6 +40,12 @@ namespace Quan_ly_phong_tro
         {
             PageGetCustomer pageGetCustomer = new PageGetCustomer();
             _NavigationFrame.Navigate(pageGetCustomer);
+        }
+
+        public void dashboard(object sender, RoutedEventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            _NavigationFrame.Navigate(dashboard);
         }
     }
 }
