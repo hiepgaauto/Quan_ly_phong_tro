@@ -8,6 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/chart.css")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("content/chart.min.css")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/chart.js")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/chart.min.js")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/phong_tro.db")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("e_sqlite3.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("e_sqlite3.dll")]
 

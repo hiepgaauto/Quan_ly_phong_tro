@@ -13,27 +13,26 @@
       TextOptions.TextRenderingMode="Auto"
       Background="{DynamicResource MaterialDesignPaper}"
       FontFamily="{DynamicResource MaterialDesignFont}"
-      Title="PageAddCustomer" Height="506">
+      Title="PageAddCustomer" Height="700">
 
     <Grid>
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.RowSpan="2">
-            <TextBlock Text="Shoes Store" HorizontalAlignment="Center" Margin="10" FontSize="28" />
-        </Grid>
-        <ScrollViewer Grid.Column="1" Grid.Row="1" Background="{DynamicResource MaterialDesignPaper}" >
+        <ScrollViewer Grid.Column="1" Grid.Row="1" Background="{DynamicResource MaterialDesignPaper}" Margin="0,0,0,-0.4" >
+
             <StackPanel >
                 <TextBlock Text="Khách thuê phòng" Margin="10" FontSize="22" FontWeight="Medium"/>
                 <StackPanel Margin="20 0 ">
                     <ItemsControl x:Name="ListViewCustomer" ItemsSource="{Binding Product}">
                         <ItemsControl.ItemTemplate>
-                            <DataTemplate>
+                            <DataTemplate >
                                 <materialDesign:Card Margin="10">
                                     <StackPanel Width="200">
                                         <Image
@@ -52,9 +51,9 @@
                                                 <RowDefinition></RowDefinition>
                                                 <RowDefinition></RowDefinition>
                                             </Grid.RowDefinitions>
-                                            
+
                                             <Grid Column="0" Row="0">
-                                                    <TextBlock Margin="5" Text="Tên :" FontSize="15"/>
+                                                <TextBlock Margin="5" Text="Tên :" FontSize="15"/>
                                             </Grid>
                                             <Grid Column="1"  Row="0">
                                                 <TextBlock Margin="5" Text="{Binding name}" FontSize="15"/>
@@ -82,20 +81,22 @@
                                                         ToolTip="MaterialDesignFlatDarkButton">
                                                         Xoá
                                                     </Button>
-
-                                                    <Button
+                                                    <Button x:Name="ClickGetCustomer"
+                                                      
                                                         Width="80"
                                                         Margin="10 15 10 20"
                                                         Style="{StaticResource MaterialDesignFlatAccentBgButton}"
-                                                        ToolTip="MaterialDesignFlatAccentBackgroundButton">
+                                                        ToolTip="MaterialDesignFlatAccentBackgroundButton"
+                                                        Click="ClickGetCustomer"
+                                                        Tag="{Binding cmnd}"  
+                                                         
+                                                        Command="{Binding OpenSample4DialogCommand}">
                                                         Sửa
-
                                                     </Button>
+
                                                 </StackPanel>
-                                                
                                             </Grid>
                                         </Grid>
-                                        
                                     </StackPanel>
                                 </materialDesign:Card>
                             </DataTemplate>
@@ -108,6 +109,11 @@
                     </ItemsControl>
                 </StackPanel>
             </StackPanel>
+
         </ScrollViewer>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <materialDesign:DialogHost VerticalAlignment="Center" IsOpen="{Binding IsShow}" DialogContent="{Binding DialogObject}" Margin="16">
+            </materialDesign:DialogHost>
+        </Grid>
     </Grid>
 </Page>
