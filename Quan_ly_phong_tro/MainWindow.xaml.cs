@@ -47,5 +47,12 @@ namespace Quan_ly_phong_tro
             Dashboard dashboard = new Dashboard();
             _NavigationFrame.Navigate(dashboard);
         }
+        
+        
+        public void clickBill(object sender, RoutedEventArgs e)
+        {
+            PageBill pageBill = new PageBill();
+            _NavigationFrame.Navigate(pageBill);
+        }
     }
 }

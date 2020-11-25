@@ -95,9 +95,13 @@
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Bill.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="PageAddCustomer.xaml.cs">
       <DependentUpon>PageAddCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageBill.xaml.cs">
+      <DependentUpon>PageBill.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageCustomer.xaml.cs">
       <DependentUpon>PageCustomer.xaml</DependentUpon>
@@ -134,6 +138,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PageAddCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageBill.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

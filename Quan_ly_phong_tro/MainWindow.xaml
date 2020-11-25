@@ -158,7 +158,7 @@
                     <TreeViewItem
     Header="Hóa đơn">
                         <TreeViewItem
-      Header="Amiga" />
+      Header="Xuất hoá đơn" PreviewMouseDown="clickBill"/>
                         <TreeViewItem>
                             <TreeViewItem.Header>
                                 <StackPanel

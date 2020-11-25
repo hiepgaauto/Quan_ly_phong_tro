@@ -124,3 +124,19 @@ C:\Users\Hoang Hiep\Desktop\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug
 C:\Users\Hoang Hiep\Desktop\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug\LiveCharts.xml
 C:\Users\Hoang Hiep\Desktop\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Hoang Hiep\Desktop\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug\LiveCharts.Wpf.xml
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug\LiveCharts.dll
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug\LiveCharts.Wpf.dll
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug\LiveCharts.pdb
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug\LiveCharts.xml
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug\LiveCharts.Wpf.pdb
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\bin\Debug\LiveCharts.Wpf.xml
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\Dashboard.g.cs
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\DialogCustomer.g.cs
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\PageCustomer.g.cs
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\PageShowRoom.g.cs
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\Dashboard.baml
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\DialogCustomer.baml
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\PageCustomer.baml
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\PageShowRoom.baml
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\PageBill.baml
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\PageBill.g.cs

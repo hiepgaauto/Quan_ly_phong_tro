@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Hoang Hiep\Desktop\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\obj\Debug\
 Quan_ly_phong_tro
 none
 false
 DEBUG;TRACE
-C:\Users\Hoang Hiep\Desktop\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\App.xaml
-8-334593466
-3285352853
-152106498141
-75-1114568481
-Dashboard.xaml;DialogCustomer.xaml;LoginWindow.xaml;MainWindow.xaml;PageAddCustomer.xaml;PageCustomer.xaml;PageGetCustomer.xaml;PageShowRoom.xaml;
+C:\Github\Quan_ly_phong_tro\Quan_ly_phong_tro\App.xaml
+9934911451
+31603262938
+17-1980245593
+75-1168054274
+Dashboard.xaml;DialogCustomer.xaml;LoginWindow.xaml;MainWindow.xaml;PageAddCustomer.xaml;PageBill.xaml;PageCustomer.xaml;PageGetCustomer.xaml;PageShowRoom.xaml;
 
-False
+True
 

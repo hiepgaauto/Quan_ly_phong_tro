@@ -18,27 +18,49 @@ namespace Quan_ly_phong_tro
         {
             using (SQLiteConnection db = new SQLiteConnection(_path))
             {
-                db.CreateTable<Customer>();
-                db.CreateTable<Room>();
                 db.CreateTable<Amount>();
+                db.CreateTable<Customer>();
+                db.CreateTable<Money_Type>();
+                db.CreateTable<Room>();
             }
         }
     }
+    public partial class Amount
+    {
+        [PrimaryKey]
+        [Unique(Name = "Amount_id_uindex", Order = 0)]
+        [MaxLength(50)]
+        public String id { get; set; }
+        
+        [MaxLength(50)]
+        public String roomId { get; set; }
+        
+        public Int32 dien { get; set; }
+        public Int32 nuoc { get; set; }
+        
+        public Int32 phong { get; set; }
+        
+        public DateTime date_create { get; set; }
+        
+        [MaxLength(50)]
+        public String name_room { get; set; }
+        
+    }
+    
     public partial class Customer
     {
         [MaxLength(50)]
         public String name { get; set; }
         
-        [PrimaryKey]
         [MaxLength(50)]
         public String cmnd { get; set; }
         
-        public Int32? birthYear { get; set; }
+        public Int32 birthYear { get; set; }
         
         [MaxLength(50)]
         public String address { get; set; }
         
-        public long room { get; set; }
+        public Int32 room { get; set; }
         
         [MaxLength(50)]
         public String numberPhone1 { get; set; }
@@ -46,7 +68,7 @@ namespace Quan_ly_phong_tro
         [MaxLength(50)]
         public String numberPhone2 { get; set; }
         
-        public DateTime? dateRent { get; set; }
+        public DateTime dateRent { get; set; }
         
         [MaxLength(50)]
         public String gender { get; set; }
@@ -57,6 +79,22 @@ namespace Quan_ly_phong_tro
         [MaxLength(50)]
         public String avatar { get; set; }
         
+        public DateTime date_create { get; set; }
+        
+    }
+    
+    public partial class Money_Type
+    {
+        [PrimaryKey]
+        public Int32 id { get; set; }
+        
+        [MaxLength(50)]
+        public String type { get; set; }
+        
+        public Int32 price { get; set; }
+        
+        public DateTime date_create { get; set; }
+        
     }
     
     public partial class Room
@@ -65,32 +103,10 @@ namespace Quan_ly_phong_tro
         public String nameRoom { get; set; }
         
         [PrimaryKey, AutoIncrement]
-        [Unique(Name = "Room_idRoom_uindex", Order = 0)]
-        public long idRoom { get; set; }
+        public Int32 idRoom { get; set; }
         
-        public Int32? statusRoom { get; set; }
+        public Int32 statusRoom { get; set; }
         
     }
-
-    public partial class Amount
-    {
-
-        [PrimaryKey, AutoIncrement]
-        [Unique(Name = "Amount_id_uindex", Order = 0)]
-        public long id { get; set; }
-
-        [MaxLength(50)]
-        public int dien { get; set; }
-
-        [MaxLength(50)]
-        public int nuoc { get; set; }
-
-        [MaxLength(50)]
-        public int phong { get; set; }
-
-        [MaxLength(50)]
-        public DateTime date_create { get; set; }
-
-    }
-
+    
 }
