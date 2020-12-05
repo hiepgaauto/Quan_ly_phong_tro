@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Quan_ly_phong_tro.Model;
 using SQLite;
+
 namespace Quan_ly_phong_tro
 {
     /// <summary>
@@ -24,8 +25,19 @@ namespace Quan_ly_phong_tro
         public PageAddCustomer()
         {
             InitializeComponent();
+            var room = GetAllRooms();
+            if (room.Count > 0)
+                ListNameRoom.ItemsSource = room;
+           
         }
-            private void checkedSexCustomer(object sender, RoutedEventArgs e)
+
+        public List<Room> GetAllRooms()
+        {
+            SQLiteConnection Connection = new SQLiteConnection(App.connecter);
+            return Connection.Table<Room>().ToList();
+        }
+
+        private void checkedSexCustomer(object sender, RoutedEventArgs e)
         {
             // ... Get RadioButton reference.
             var button = sender as RadioButton;
@@ -33,8 +45,11 @@ namespace Quan_ly_phong_tro
             // ... Display button content as title.
             this.Title = button.Content.ToString();
         }
+
         private void insertCustomer(object sender, RoutedEventArgs e)
         {
+            Room roomID = ListNameRoom.SelectedItem as Room;
+           
             var checkValue= checkGender.Children.OfType<RadioButton>()
                  .FirstOrDefault(r => r.IsChecked.HasValue && r.IsChecked.Value);
             string s = checkValue.IsChecked==true ? "male" : "female";
@@ -43,11 +58,11 @@ namespace Quan_ly_phong_tro
                 name = nameCustomer.Text,
                 address = address.Text,
                 birthYear = int.Parse(birth.Text),
-                //jobCustomer = job.Text,
+                jobCustomer = job.Text,
                 numberPhone1 = numphone1.Text,
                 numberPhone2 = numphone2.Text,
                 dateRent = dayRent.DisplayDate,
-                //room = room.Text,
+                room = roomID.idRoom,
                 gender = s.ToString(),
                 cmnd = cmnd.Text,
             };

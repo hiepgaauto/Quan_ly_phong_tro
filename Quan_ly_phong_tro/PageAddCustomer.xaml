@@ -178,22 +178,12 @@
   Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Margin="0,0,109,0" Height="47" />
                         <Border Padding="10"></Border>
                         <ComboBox
-  materialDesign:HintAssist.Hint="Chọn phòng thuê" Margin="0,0,64,0" x:Name="room">
-                            <ComboBoxItem>
-                                Phòng 1
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Phòng 2
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Phòng 3
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Phòng 4
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                Phòng 5
-                            </ComboBoxItem>
+                        x:Name="ListNameRoom"
+                        DisplayMemberPath="nameRoom"
+                        
+                        ItemsSource="{Binding Path=Room}"
+                        SelectedItem="{Binding note, Mode=TwoWay}"
+                        materialDesign:HintAssist.Hint="Chọn phòng thuê" Margin="0,0,64,0">
                         </ComboBox>
                     </StackPanel>
                 </Grid>
